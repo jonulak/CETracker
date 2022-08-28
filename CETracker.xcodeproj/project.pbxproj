@@ -7,9 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C402341428A0C2D300A6C0D4 /* RenewalRequirement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402341328A0C2D300A6C0D4 /* RenewalRequirement.swift */; };
+		C417718B28975AE500EB1851 /* LicenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417718A28975AE500EB1851 /* LicenseListViewController.swift */; };
+		C4276A5328AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4276A5128AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift */; };
+		C4276A5428AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4276A5228AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib */; };
+		C42F09B82894348E001870F8 /* CELogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F09B72894348E001870F8 /* CELogViewModel.swift */; };
+		C42F09BA28943497001870F8 /* CELogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F09B928943497001870F8 /* CELogModel.swift */; };
+		C43C9324288F076300719BBA /* CEImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C9323288F076300719BBA /* CEImporter.swift */; };
+		C43C9327288F084100719BBA /* NABPCEImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C9326288F084100719BBA /* NABPCEImporter.swift */; };
+		C43C932A289253BD00719BBA /* CECreditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C9328289253BD00719BBA /* CECreditCell.swift */; };
+		C43C932B289253BD00719BBA /* CECreditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43C9329289253BD00719BBA /* CECreditCell.xib */; };
+		C459913028B8354100F9CE1A /* TableChangeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C459912F28B8354100F9CE1A /* TableChangeType.swift */; };
+		C459913228B8361700F9CE1A /* UITableView+animateChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = C459913128B8361700F9CE1A /* UITableView+animateChanges.swift */; };
 		C4AE95C9284545F300A4554A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95C8284545F300A4554A /* AppDelegate.swift */; };
 		C4AE95CB284545F300A4554A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95CA284545F300A4554A /* SceneDelegate.swift */; };
-		C4AE95CD284545F300A4554A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95CC284545F300A4554A /* ViewController.swift */; };
+		C4AE95CD284545F300A4554A /* CELogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95CC284545F300A4554A /* CELogViewController.swift */; };
 		C4AE95D0284545F300A4554A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4AE95CE284545F300A4554A /* Main.storyboard */; };
 		C4AE95D3284545F300A4554A /* CETracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95D1284545F300A4554A /* CETracker.xcdatamodeld */; };
 		C4AE95D5284545F400A4554A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4AE95D4284545F400A4554A /* Assets.xcassets */; };
@@ -17,6 +29,27 @@
 		C4AE95E3284545F500A4554A /* CETrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95E2284545F500A4554A /* CETrackerTests.swift */; };
 		C4AE95ED284545F500A4554A /* CETrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95EC284545F500A4554A /* CETrackerUITests.swift */; };
 		C4AE95EF284545F500A4554A /* CETrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95EE284545F500A4554A /* CETrackerUITestsLaunchTests.swift */; };
+		C4B668EF28B4A85C00AA2B98 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4B668EE28B4A85C00AA2B98 /* KeychainSwift */; };
+		C4C129C528986DB200C46064 /* StateLicenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C129C328986DB200C46064 /* StateLicenseCell.swift */; };
+		C4C129C628986DB200C46064 /* StateLicenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C129C428986DB200C46064 /* StateLicenseCell.xib */; };
+		C4C3B6FF288BC5E300119B41 /* CoreXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = C4C3B6FE288BC5E300119B41 /* CoreXLSX */; };
+		C4C3B701288D1CA300119B41 /* CELogProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3B700288D1CA300119B41 /* CELogProperty.swift */; };
+		C4C3B703288D1CBB00119B41 /* CETopicDesignator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3B702288D1CBB00119B41 /* CETopicDesignator.swift */; };
+		C4C3B713288E3CB200119B41 /* TopicDesignator+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3B70F288E3CB200119B41 /* TopicDesignator+CoreDataClass.swift */; };
+		C4C3B714288E3CB200119B41 /* TopicDesignator+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3B710288E3CB200119B41 /* TopicDesignator+CoreDataProperties.swift */; };
+		C4C3B715288E3CB200119B41 /* CECredit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3B711288E3CB200119B41 /* CECredit+CoreDataClass.swift */; };
+		C4C3B716288E3CB200119B41 /* CECredit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C3B712288E3CB200119B41 /* CECredit+CoreDataProperties.swift */; };
+		C4DCBD7C28BB211F00A20C0A /* NestedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DCBD7B28BB211F00A20C0A /* NestedTableView.swift */; };
+		C4E28A31289787F300E8636F /* USState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A30289787F300E8636F /* USState.swift */; };
+		C4E28A3628978B8600E8636F /* License+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3228978B8600E8636F /* License+CoreDataClass.swift */; };
+		C4E28A3728978B8600E8636F /* License+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3328978B8600E8636F /* License+CoreDataProperties.swift */; };
+		C4E28A3828978B8600E8636F /* LicenseRenewal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3428978B8600E8636F /* LicenseRenewal+CoreDataClass.swift */; };
+		C4E28A3928978B8600E8636F /* LicenseRenewal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3528978B8600E8636F /* LicenseRenewal+CoreDataProperties.swift */; };
+		C4E28A3B28978CC800E8636F /* LicenseRenewalStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3A28978CC800E8636F /* LicenseRenewalStatus.swift */; };
+		C4E28A3D28979AFF00E8636F /* LicenseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3C28979AFF00E8636F /* LicenseListViewModel.swift */; };
+		C4E28A3F28979B1400E8636F /* LicenseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3E28979B1400E8636F /* LicenseListModel.swift */; };
+		C4F541A72898F5B500E308CA /* RenewalRequirementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F541A52898F5B500E308CA /* RenewalRequirementCell.swift */; };
+		C4F541A82898F5B500E308CA /* RenewalRequirementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F541A62898F5B500E308CA /* RenewalRequirementCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +70,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C402341328A0C2D300A6C0D4 /* RenewalRequirement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewalRequirement.swift; sourceTree = "<group>"; };
+		C417718A28975AE500EB1851 /* LicenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListViewController.swift; sourceTree = "<group>"; };
+		C4276A5128AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NABPCEImporterConfigViewController.swift; sourceTree = "<group>"; };
+		C4276A5228AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NABPCEImporterConfigViewController.xib; sourceTree = "<group>"; };
+		C42F09B72894348E001870F8 /* CELogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELogViewModel.swift; sourceTree = "<group>"; };
+		C42F09B928943497001870F8 /* CELogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELogModel.swift; sourceTree = "<group>"; };
+		C43C9323288F076300719BBA /* CEImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEImporter.swift; sourceTree = "<group>"; };
+		C43C9326288F084100719BBA /* NABPCEImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NABPCEImporter.swift; sourceTree = "<group>"; };
+		C43C9328289253BD00719BBA /* CECreditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CECreditCell.swift; sourceTree = "<group>"; };
+		C43C9329289253BD00719BBA /* CECreditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CECreditCell.xib; sourceTree = "<group>"; };
+		C459912F28B8354100F9CE1A /* TableChangeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableChangeType.swift; sourceTree = "<group>"; };
+		C459913128B8361700F9CE1A /* UITableView+animateChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+animateChanges.swift"; sourceTree = "<group>"; };
 		C4AE95C5284545F300A4554A /* CETracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CETracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AE95C8284545F300A4554A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AE95CA284545F300A4554A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4AE95CC284545F300A4554A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4AE95CC284545F300A4554A /* CELogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELogViewController.swift; sourceTree = "<group>"; };
 		C4AE95CF284545F300A4554A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4AE95D2284545F300A4554A /* CETracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CETracker.xcdatamodel; sourceTree = "<group>"; };
 		C4AE95D4284545F400A4554A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +96,25 @@
 		C4AE95E8284545F500A4554A /* CETrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CETrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AE95EC284545F500A4554A /* CETrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CETrackerUITests.swift; sourceTree = "<group>"; };
 		C4AE95EE284545F500A4554A /* CETrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CETrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C4C129C328986DB200C46064 /* StateLicenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateLicenseCell.swift; sourceTree = "<group>"; };
+		C4C129C428986DB200C46064 /* StateLicenseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateLicenseCell.xib; sourceTree = "<group>"; };
+		C4C3B700288D1CA300119B41 /* CELogProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CELogProperty.swift; sourceTree = "<group>"; };
+		C4C3B702288D1CBB00119B41 /* CETopicDesignator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CETopicDesignator.swift; sourceTree = "<group>"; };
+		C4C3B70F288E3CB200119B41 /* TopicDesignator+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicDesignator+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4C3B710288E3CB200119B41 /* TopicDesignator+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicDesignator+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C4C3B711288E3CB200119B41 /* CECredit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CECredit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4C3B712288E3CB200119B41 /* CECredit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CECredit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C4DCBD7B28BB211F00A20C0A /* NestedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedTableView.swift; sourceTree = "<group>"; };
+		C4E28A30289787F300E8636F /* USState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USState.swift; sourceTree = "<group>"; };
+		C4E28A3228978B8600E8636F /* License+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "License+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4E28A3328978B8600E8636F /* License+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "License+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C4E28A3428978B8600E8636F /* LicenseRenewal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LicenseRenewal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4E28A3528978B8600E8636F /* LicenseRenewal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LicenseRenewal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C4E28A3A28978CC800E8636F /* LicenseRenewalStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseRenewalStatus.swift; sourceTree = "<group>"; };
+		C4E28A3C28979AFF00E8636F /* LicenseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListViewModel.swift; sourceTree = "<group>"; };
+		C4E28A3E28979B1400E8636F /* LicenseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListModel.swift; sourceTree = "<group>"; };
+		C4F541A52898F5B500E308CA /* RenewalRequirementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewalRequirementCell.swift; sourceTree = "<group>"; };
+		C4F541A62898F5B500E308CA /* RenewalRequirementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RenewalRequirementCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B668EF28B4A85C00AA2B98 /* KeychainSwift in Frameworks */,
+				C4C3B6FF288BC5E300119B41 /* CoreXLSX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C43C9325288F07C500719BBA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C43C9323288F076300719BBA /* CEImporter.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		C4AE95BC284545F300A4554A = {
 			isa = PBXGroup;
 			children = (
@@ -103,12 +177,12 @@
 			children = (
 				C4AE95C8284545F300A4554A /* AppDelegate.swift */,
 				C4AE95CA284545F300A4554A /* SceneDelegate.swift */,
-				C4AE95CC284545F300A4554A /* ViewController.swift */,
-				C4AE95CE284545F300A4554A /* Main.storyboard */,
+				C4C3B6FC2889C6E900119B41 /* Models */,
+				C4C3B6F62887C00400119B41 /* Views */,
+				C4C3B6FB2889C6DA00119B41 /* ViewModels */,
 				C4AE95D4284545F400A4554A /* Assets.xcassets */,
 				C4AE95D6284545F400A4554A /* LaunchScreen.storyboard */,
 				C4AE95D9284545F400A4554A /* Info.plist */,
-				C4AE95D1284545F300A4554A /* CETracker.xcdatamodeld */,
 			);
 			path = CETracker;
 			sourceTree = "<group>";
@@ -130,6 +204,69 @@
 			path = CETrackerUITests;
 			sourceTree = "<group>";
 		};
+		C4C3B6F62887C00400119B41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4AE95CE284545F300A4554A /* Main.storyboard */,
+				C4276A5128AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift */,
+				C4276A5228AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib */,
+				C4DCBD7B28BB211F00A20C0A /* NestedTableView.swift */,
+				C4AE95CC284545F300A4554A /* CELogViewController.swift */,
+				C417718A28975AE500EB1851 /* LicenseListViewController.swift */,
+				C43C9328289253BD00719BBA /* CECreditCell.swift */,
+				C43C9329289253BD00719BBA /* CECreditCell.xib */,
+				C4C129C328986DB200C46064 /* StateLicenseCell.swift */,
+				C4C129C428986DB200C46064 /* StateLicenseCell.xib */,
+				C4F541A52898F5B500E308CA /* RenewalRequirementCell.swift */,
+				C4F541A62898F5B500E308CA /* RenewalRequirementCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4C3B6FB2889C6DA00119B41 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C42F09B72894348E001870F8 /* CELogViewModel.swift */,
+				C4E28A3C28979AFF00E8636F /* LicenseListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C4C3B6FC2889C6E900119B41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4C3B706288E3BCC00119B41 /* Core Data */,
+				C43C9325288F07C500719BBA /* Protocols */,
+				C4C3B700288D1CA300119B41 /* CELogProperty.swift */,
+				C4C3B702288D1CBB00119B41 /* CETopicDesignator.swift */,
+				C43C9326288F084100719BBA /* NABPCEImporter.swift */,
+				C42F09B928943497001870F8 /* CELogModel.swift */,
+				C4E28A3A28978CC800E8636F /* LicenseRenewalStatus.swift */,
+				C459912F28B8354100F9CE1A /* TableChangeType.swift */,
+				C4E28A30289787F300E8636F /* USState.swift */,
+				C4E28A3E28979B1400E8636F /* LicenseListModel.swift */,
+				C402341328A0C2D300A6C0D4 /* RenewalRequirement.swift */,
+				C459913128B8361700F9CE1A /* UITableView+animateChanges.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4C3B706288E3BCC00119B41 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				C4AE95D1284545F300A4554A /* CETracker.xcdatamodeld */,
+				C4E28A3228978B8600E8636F /* License+CoreDataClass.swift */,
+				C4E28A3328978B8600E8636F /* License+CoreDataProperties.swift */,
+				C4E28A3428978B8600E8636F /* LicenseRenewal+CoreDataClass.swift */,
+				C4E28A3528978B8600E8636F /* LicenseRenewal+CoreDataProperties.swift */,
+				C4C3B70F288E3CB200119B41 /* TopicDesignator+CoreDataClass.swift */,
+				C4C3B710288E3CB200119B41 /* TopicDesignator+CoreDataProperties.swift */,
+				C4C3B711288E3CB200119B41 /* CECredit+CoreDataClass.swift */,
+				C4C3B712288E3CB200119B41 /* CECredit+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +283,10 @@
 			dependencies = (
 			);
 			name = CETracker;
+			packageProductDependencies = (
+				C4C3B6FE288BC5E300119B41 /* CoreXLSX */,
+				C4B668EE28B4A85C00AA2B98 /* KeychainSwift */,
+			);
 			productName = CETracker;
 			productReference = C4AE95C5284545F300A4554A /* CETracker.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +359,10 @@
 				Base,
 			);
 			mainGroup = C4AE95BC284545F300A4554A;
+			packageReferences = (
+				C4C3B6FD288BC5E300119B41 /* XCRemoteSwiftPackageReference "CoreXLSX" */,
+				C4B668ED28B4A85C00AA2B98 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = C4AE95C6284545F300A4554A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,9 +379,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43C932B289253BD00719BBA /* CECreditCell.xib in Resources */,
+				C4C129C628986DB200C46064 /* StateLicenseCell.xib in Resources */,
+				C4F541A82898F5B500E308CA /* RenewalRequirementCell.xib in Resources */,
 				C4AE95D8284545F400A4554A /* LaunchScreen.storyboard in Resources */,
 				C4AE95D5284545F400A4554A /* Assets.xcassets in Resources */,
 				C4AE95D0284545F300A4554A /* Main.storyboard in Resources */,
+				C4276A5428AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +410,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4AE95CD284545F300A4554A /* ViewController.swift in Sources */,
+				C4C3B715288E3CB200119B41 /* CECredit+CoreDataClass.swift in Sources */,
+				C4C3B701288D1CA300119B41 /* CELogProperty.swift in Sources */,
+				C402341428A0C2D300A6C0D4 /* RenewalRequirement.swift in Sources */,
+				C4E28A3B28978CC800E8636F /* LicenseRenewalStatus.swift in Sources */,
+				C4E28A3928978B8600E8636F /* LicenseRenewal+CoreDataProperties.swift in Sources */,
+				C4C3B713288E3CB200119B41 /* TopicDesignator+CoreDataClass.swift in Sources */,
+				C4E28A3628978B8600E8636F /* License+CoreDataClass.swift in Sources */,
+				C4AE95CD284545F300A4554A /* CELogViewController.swift in Sources */,
+				C459913028B8354100F9CE1A /* TableChangeType.swift in Sources */,
+				C4E28A3D28979AFF00E8636F /* LicenseListViewModel.swift in Sources */,
+				C43C932A289253BD00719BBA /* CECreditCell.swift in Sources */,
+				C4E28A3F28979B1400E8636F /* LicenseListModel.swift in Sources */,
+				C4F541A72898F5B500E308CA /* RenewalRequirementCell.swift in Sources */,
+				C4E28A3828978B8600E8636F /* LicenseRenewal+CoreDataClass.swift in Sources */,
 				C4AE95C9284545F300A4554A /* AppDelegate.swift in Sources */,
+				C43C9324288F076300719BBA /* CEImporter.swift in Sources */,
+				C4C3B714288E3CB200119B41 /* TopicDesignator+CoreDataProperties.swift in Sources */,
+				C4DCBD7C28BB211F00A20C0A /* NestedTableView.swift in Sources */,
+				C459913228B8361700F9CE1A /* UITableView+animateChanges.swift in Sources */,
+				C417718B28975AE500EB1851 /* LicenseListViewController.swift in Sources */,
+				C4C129C528986DB200C46064 /* StateLicenseCell.swift in Sources */,
+				C4C3B703288D1CBB00119B41 /* CETopicDesignator.swift in Sources */,
 				C4AE95D3284545F300A4554A /* CETracker.xcdatamodeld in Sources */,
+				C4C3B716288E3CB200119B41 /* CECredit+CoreDataProperties.swift in Sources */,
+				C4E28A3728978B8600E8636F /* License+CoreDataProperties.swift in Sources */,
+				C4E28A31289787F300E8636F /* USState.swift in Sources */,
+				C42F09BA28943497001870F8 /* CELogModel.swift in Sources */,
+				C42F09B82894348E001870F8 /* CELogViewModel.swift in Sources */,
+				C43C9327288F084100719BBA /* NABPCEImporter.swift in Sources */,
 				C4AE95CB284545F300A4554A /* SceneDelegate.swift in Sources */,
+				C4276A5328AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +623,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,7 +635,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -475,6 +652,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,7 +664,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -606,6 +784,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4B668ED28B4A85C00AA2B98 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C4C3B6FD288BC5E300119B41 /* XCRemoteSwiftPackageReference "CoreXLSX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoreOffice/CoreXLSX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4B668EE28B4A85C00AA2B98 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4B668ED28B4A85C00AA2B98 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		C4C3B6FE288BC5E300119B41 /* CoreXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4C3B6FD288BC5E300119B41 /* XCRemoteSwiftPackageReference "CoreXLSX" */;
+			productName = CoreXLSX;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C4AE95D1284545F300A4554A /* CETracker.xcdatamodeld */ = {

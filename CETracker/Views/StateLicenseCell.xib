@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="KGk-i7-Jjw" customClass="StateLicenseCell" customModule="CETracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afO-5I-KoN" userLabel="Cell Bubble">
+                        <rect key="frame" x="8" y="4" width="318" height="90"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxP-8i-1UQ">
+                                <rect key="frame" x="10" y="5" width="298" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires: 03/31/21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKz-Oy-gia" userLabel="Expiration Date">
+                                <rect key="frame" x="10" y="22" width="298" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utr-CC-mKn" userLabel="Divider">
+                                <rect key="frame" x="10" y="41" width="298" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Cag-88-awV"/>
+                                </constraints>
+                            </view>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="phQ-iL-gOp" customClass="NestedTableView" customModule="CETracker" customModuleProvider="target">
+                                <rect key="frame" x="10" y="47" width="298" height="38"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="utr-CC-mKn" firstAttribute="trailing" secondItem="VxP-8i-1UQ" secondAttribute="trailing" id="BYt-Fl-32O"/>
+                            <constraint firstItem="phQ-iL-gOp" firstAttribute="trailing" secondItem="VxP-8i-1UQ" secondAttribute="trailing" id="CjM-PQ-Rgj"/>
+                            <constraint firstItem="phQ-iL-gOp" firstAttribute="top" secondItem="utr-CC-mKn" secondAttribute="bottom" constant="5" id="H8l-UZ-HlN"/>
+                            <constraint firstItem="VxP-8i-1UQ" firstAttribute="top" secondItem="afO-5I-KoN" secondAttribute="top" constant="5" id="IPd-jl-8kj"/>
+                            <constraint firstItem="phQ-iL-gOp" firstAttribute="leading" secondItem="VxP-8i-1UQ" secondAttribute="leading" id="VML-zC-qvf"/>
+                            <constraint firstItem="qKz-Oy-gia" firstAttribute="top" secondItem="VxP-8i-1UQ" secondAttribute="bottom" id="bRI-CL-5vf"/>
+                            <constraint firstItem="qKz-Oy-gia" firstAttribute="leading" secondItem="VxP-8i-1UQ" secondAttribute="leading" id="d37-lT-I3T"/>
+                            <constraint firstItem="utr-CC-mKn" firstAttribute="top" secondItem="qKz-Oy-gia" secondAttribute="bottom" constant="2" id="jRJ-me-Rpx"/>
+                            <constraint firstItem="VxP-8i-1UQ" firstAttribute="leading" secondItem="afO-5I-KoN" secondAttribute="leading" constant="10" id="jfJ-vv-1vZ"/>
+                            <constraint firstAttribute="trailing" secondItem="VxP-8i-1UQ" secondAttribute="trailing" constant="10" id="mUX-9s-m6r"/>
+                            <constraint firstAttribute="bottom" secondItem="phQ-iL-gOp" secondAttribute="bottom" constant="5" id="odZ-KE-lIi"/>
+                            <constraint firstItem="qKz-Oy-gia" firstAttribute="trailing" secondItem="VxP-8i-1UQ" secondAttribute="trailing" id="qhk-KM-3zj"/>
+                            <constraint firstItem="utr-CC-mKn" firstAttribute="leading" secondItem="VxP-8i-1UQ" secondAttribute="leading" id="rRq-ac-aOw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="afO-5I-KoN" secondAttribute="trailing" constant="8" id="UHz-4z-2tf"/>
+                    <constraint firstAttribute="bottom" secondItem="afO-5I-KoN" secondAttribute="bottom" constant="4" id="c9f-iz-reS"/>
+                    <constraint firstItem="afO-5I-KoN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jxT-Wt-QbK"/>
+                    <constraint firstItem="afO-5I-KoN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="o7F-44-EkB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellBubble" destination="afO-5I-KoN" id="Ol8-Hr-Kfo"/>
+                <outlet property="expirationDateLabel" destination="qKz-Oy-gia" id="2v9-k7-KkR"/>
+                <outlet property="requirementsTableView" destination="phQ-iL-gOp" id="D2R-wZ-DeD"/>
+                <outlet property="stateNameLabel" destination="VxP-8i-1UQ" id="aEa-bR-E9R"/>
+            </connections>
+            <point key="canvasLocation" x="-455.07246376811599" y="-93.080357142857139"/>
+        </tableViewCell>
+    </objects>
+</document>
