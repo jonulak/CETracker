@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kv5-aN-hZ8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kv5-aN-hZ8">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,129 +129,11 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="licenseListTableView" destination="dPU-DO-GBK" id="lqa-bS-U5e"/>
-                        <segue destination="elw-i4-oUl" kind="show" identifier="licenseDetailSegue" id="tis-g1-zGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9K-ns-K7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="519" y="-395"/>
-        </scene>
-        <!--License Detail-->
-        <scene sceneID="ayj-PI-lXj">
-            <objects>
-                <viewController id="elw-i4-oUl" customClass="LicenseDetailViewController" customModule="CETracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NS4-Dl-wiU">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeX-ZE-B4G">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZb-SE-7ra" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="462"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ITl-OU-K6y" userLabel="Vertical Stack View">
-                                                <rect key="frame" x="8" y="0.0" width="412" height="62"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ypS-7T-lxx" userLabel="ExpirationDateStack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="412" height="38"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogI-CV-fju">
-                                                                <rect key="frame" x="0.0" y="7" width="89.666666666666671" height="24"/>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLA-1g-zT4">
-                                                                <rect key="frame" x="97.666666666666686" y="0.0" width="140" height="38"/>
-                                                                <buttonConfiguration key="configuration" style="gray" imagePlacement="trailing" title="12/31/2022" imagePadding="4" titleAlignment="leading">
-                                                                    <imageReference key="image" image="chevron.up.chevron.down" catalog="system" symbolScale="small"/>
-                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
-                                                                </buttonConfiguration>
-                                                            </button>
-                                                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="5ZA-ad-tZ4">
-                                                                <rect key="frame" x="245.66666666666663" y="18.666666666666668" width="166.33333333333337" height="1"/>
-                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="1" id="p0D-Cf-ZtM"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jo8-sw-yUm" userLabel="LicenseNumberStack">
-                                                        <rect key="frame" x="0.0" y="38" width="412" height="24"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgj-JA-vul">
-                                                                <rect key="frame" x="0.0" y="0.0" width="89.666666666666671" height="24"/>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABCD1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRc-fo-jJL">
-                                                                <rect key="frame" x="97.666666666666657" y="0.0" width="314.33333333333337" height="24"/>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="ogI-CV-fju" firstAttribute="width" secondItem="Kgj-JA-vul" secondAttribute="width" id="ziJ-Rt-aly"/>
-                                                </constraints>
-                                            </stackView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="412" placeholderIntrinsicHeight="400" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X7H-Ia-xr8" userLabel="Requirements Table View" customClass="NestedTableView" customModule="CETracker" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="62" width="412" height="400"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                            </tableView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ITl-OU-K6y" secondAttribute="trailing" constant="8" id="68a-Hb-ZRU"/>
-                                            <constraint firstItem="ITl-OU-K6y" firstAttribute="leading" secondItem="sZb-SE-7ra" secondAttribute="leading" constant="8" id="I7b-8T-aQy"/>
-                                            <constraint firstItem="ITl-OU-K6y" firstAttribute="top" secondItem="sZb-SE-7ra" secondAttribute="top" id="LOb-Wk-RUO"/>
-                                            <constraint firstAttribute="trailing" secondItem="X7H-Ia-xr8" secondAttribute="trailing" constant="8" id="Vgj-ps-bMF"/>
-                                            <constraint firstAttribute="bottom" secondItem="X7H-Ia-xr8" secondAttribute="bottom" id="Zcz-fD-6M6"/>
-                                            <constraint firstItem="X7H-Ia-xr8" firstAttribute="leading" secondItem="sZb-SE-7ra" secondAttribute="leading" constant="8" id="m5S-QN-zHT"/>
-                                            <constraint firstItem="X7H-Ia-xr8" firstAttribute="top" secondItem="ITl-OU-K6y" secondAttribute="bottom" id="pvo-3O-n1s"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="sZb-SE-7ra" firstAttribute="width" secondItem="csO-Z6-OeZ" secondAttribute="width" id="5gu-BT-L4O"/>
-                                    <constraint firstItem="sZb-SE-7ra" firstAttribute="top" secondItem="SRY-ci-jjU" secondAttribute="top" id="J6K-Hz-h8W"/>
-                                    <constraint firstItem="sZb-SE-7ra" firstAttribute="bottom" secondItem="SRY-ci-jjU" secondAttribute="bottom" id="ZTU-dT-hrD"/>
-                                    <constraint firstItem="sZb-SE-7ra" firstAttribute="trailing" secondItem="SRY-ci-jjU" secondAttribute="trailing" id="b54-IQ-wQX"/>
-                                    <constraint firstItem="sZb-SE-7ra" firstAttribute="leading" secondItem="SRY-ci-jjU" secondAttribute="leading" id="vcu-9Y-z3b"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="SRY-ci-jjU"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="csO-Z6-OeZ"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="g1C-Yd-95Q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aeX-ZE-B4G" firstAttribute="top" secondItem="NS4-Dl-wiU" secondAttribute="top" id="YEi-1z-BYx"/>
-                            <constraint firstAttribute="bottom" secondItem="aeX-ZE-B4G" secondAttribute="bottom" id="d5z-UK-fmW"/>
-                            <constraint firstItem="aeX-ZE-B4G" firstAttribute="leading" secondItem="g1C-Yd-95Q" secondAttribute="leading" id="oby-4h-EJH"/>
-                            <constraint firstItem="g1C-Yd-95Q" firstAttribute="trailing" secondItem="aeX-ZE-B4G" secondAttribute="trailing" id="zlQ-hM-wS0"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="License Detail" id="csy-2V-jiK">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis.circle" catalog="system" id="NSp-e8-Wte"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="expirationDateButton" destination="KLA-1g-zT4" id="FUC-pf-4dc"/>
-                        <outlet property="licenseNumberLabel" destination="BRc-fo-jJL" id="oc0-AA-hK2"/>
-                        <outlet property="licenseNumberStack" destination="jo8-sw-yUm" id="nFI-c1-bhw"/>
-                        <outlet property="moreBarButton" destination="NSp-e8-Wte" id="eIk-E9-8xL"/>
-                        <outlet property="requirementsTableView" destination="X7H-Ia-xr8" id="kL7-fb-OSx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qTl-J7-jaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1369.6261682242989" y="-395.24838012958963"/>
         </scene>
         <!--Item-->
         <scene sceneID="gfF-2k-mbG">
@@ -273,8 +154,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.up.chevron.down" catalog="system" width="128" height="128"/>
-        <image name="ellipsis.circle" catalog="system" width="128" height="123"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="person.text.rectangle" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">

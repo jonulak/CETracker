@@ -22,7 +22,6 @@ class LicenseListViewController: UIViewController {
 
         licenseListViewModel = LicenseListViewModel(context: context)
         licenseListTableView.dataSource = self
-        licenseListTableView.delegate = self
         licenseListTableView.register(
             UINib(nibName: "StateLicenseCell", bundle: nil),
             forCellReuseIdentifier: "LicenseListCell"
@@ -32,22 +31,6 @@ class LicenseListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         licenseListTableView.reloadData()
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "licenseDetailSegue":
-            let detailVC = segue.destination as! LicenseDetailViewController
-            if let licenseIndex = licenseListTableView.indexPathForSelectedRow?.row {
-                let license = licenseListViewModel.licenses[licenseIndex]
-                let model = LicenseDetailModel(license: license)
-                let viewModel = LicenseDetailViewModel(licenseDetailModel: model)
-                detailVC.viewModel = viewModel
-                detailVC.navigationItem.title = license.state.stateName
-            }
-        default:
-            fatalError("Unexpected segue identifier")
-        }
     }
 
     @IBAction func addLicensesTapped(_ sender: Any) {
@@ -92,13 +75,5 @@ extension LicenseListViewController: UITableViewDataSource {
         cell.requirements = Array(renewal.licenseRenewalRequirements)
 
         return cell
-    }
-}
-
-// MARK: - UITableViewDelegate
-extension LicenseListViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
-        performSegue(withIdentifier: "licenseDetailSegue", sender: nil)
     }
 }

@@ -14,7 +14,6 @@
 		C404650228DA3553009830AB /* RenewalDetailCreditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C404650028DA3553009830AB /* RenewalDetailCreditCell.xib */; };
 		C404650E28DA76F6009830AB /* SemiCircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404650D28DA76F6009830AB /* SemiCircleProgressBar.swift */; };
 		C407210028D5AB7D0051E735 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C40720FF28D5AB7D0051E735 /* .swiftlint.yml */; };
-		C40B360228D3E946002BA4F4 /* LicenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B360128D3E946002BA4F4 /* LicenseDetailViewController.swift */; };
 		C417718B28975AE500EB1851 /* LicenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C417718A28975AE500EB1851 /* LicenseListViewController.swift */; };
 		C4276A5328AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4276A5128AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift */; };
 		C4276A5428AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4276A5228AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib */; };
@@ -34,8 +33,6 @@
 		C459913228B8361700F9CE1A /* UITableView+animateChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = C459913128B8361700F9CE1A /* UITableView+animateChanges.swift */; };
 		C47EB4B628D7C0BE001755C3 /* SemiCircleBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47EB4B528D7C0BE001755C3 /* SemiCircleBar.swift */; };
 		C4882F7528DD27C300798913 /* NumberFormatter+CETrackerCreditHourFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4882F7428DD27C300798913 /* NumberFormatter+CETrackerCreditHourFormatter.swift */; };
-		C49621BF28D7FA5C0021DD9A /* LicenseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49621BE28D7FA5C0021DD9A /* LicenseDetailViewModel.swift */; };
-		C49621C128D7FAC10021DD9A /* LicenseDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49621C028D7FAC10021DD9A /* LicenseDetailModel.swift */; };
 		C4AE95C9284545F300A4554A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95C8284545F300A4554A /* AppDelegate.swift */; };
 		C4AE95CB284545F300A4554A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95CA284545F300A4554A /* SceneDelegate.swift */; };
 		C4AE95CD284545F300A4554A /* CELogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE95CC284545F300A4554A /* CELogViewController.swift */; };
@@ -97,7 +94,6 @@
 		C404650028DA3553009830AB /* RenewalDetailCreditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RenewalDetailCreditCell.xib; sourceTree = "<group>"; };
 		C404650D28DA76F6009830AB /* SemiCircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircleProgressBar.swift; sourceTree = "<group>"; };
 		C40720FF28D5AB7D0051E735 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		C40B360128D3E946002BA4F4 /* LicenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewController.swift; sourceTree = "<group>"; };
 		C417718A28975AE500EB1851 /* LicenseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListViewController.swift; sourceTree = "<group>"; };
 		C4276A5128AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NABPCEImporterConfigViewController.swift; sourceTree = "<group>"; };
 		C4276A5228AD5E86004B0C6F /* NABPCEImporterConfigViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NABPCEImporterConfigViewController.xib; sourceTree = "<group>"; };
@@ -117,8 +113,6 @@
 		C459913128B8361700F9CE1A /* UITableView+animateChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+animateChanges.swift"; sourceTree = "<group>"; };
 		C47EB4B528D7C0BE001755C3 /* SemiCircleBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiCircleBar.swift; sourceTree = "<group>"; };
 		C4882F7428DD27C300798913 /* NumberFormatter+CETrackerCreditHourFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+CETrackerCreditHourFormatter.swift"; sourceTree = "<group>"; };
-		C49621BE28D7FA5C0021DD9A /* LicenseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailViewModel.swift; sourceTree = "<group>"; };
-		C49621C028D7FAC10021DD9A /* LicenseDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseDetailModel.swift; sourceTree = "<group>"; };
 		C4AE95C5284545F300A4554A /* CETracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CETracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AE95C8284545F300A4554A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4AE95CA284545F300A4554A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -303,7 +297,6 @@
 				C4AE95CC284545F300A4554A /* CELogViewController.swift */,
 				C417718A28975AE500EB1851 /* LicenseListViewController.swift */,
 				C42A3ED928C917BC00C4D6E8 /* AddLicenseView.swift */,
-				C40B360128D3E946002BA4F4 /* LicenseDetailViewController.swift */,
 				C404650D28DA76F6009830AB /* SemiCircleProgressBar.swift */,
 			);
 			path = Views;
@@ -314,7 +307,6 @@
 			children = (
 				C42F09B72894348E001870F8 /* CELogViewModel.swift */,
 				C4E28A3C28979AFF00E8636F /* LicenseListViewModel.swift */,
-				C49621BE28D7FA5C0021DD9A /* LicenseDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,7 +319,6 @@
 				C43C9326288F084100719BBA /* NABPCEImporter.swift */,
 				C42F09B928943497001870F8 /* CELogModel.swift */,
 				C4E28A3E28979B1400E8636F /* LicenseListModel.swift */,
-				C49621C028D7FAC10021DD9A /* LicenseDetailModel.swift */,
 				C402341328A0C2D300A6C0D4 /* StateRenewalRequirement.swift */,
 				C42A3EDB28CA81F000C4D6E8 /* LicenseInfo.swift */,
 				C42A3EE128CD058000C4D6E8 /* RenewalRequirementsBuilder.swift */,
@@ -559,7 +550,6 @@
 				C42A3EDC28CA81F000C4D6E8 /* LicenseInfo.swift in Sources */,
 				C4DCBD8228BFC5F900A20C0A /* LicenseRenewalRequirement+CoreDataProperties.swift in Sources */,
 				C404650E28DA76F6009830AB /* SemiCircleProgressBar.swift in Sources */,
-				C40B360228D3E946002BA4F4 /* LicenseDetailViewController.swift in Sources */,
 				C4E28A3D28979AFF00E8636F /* LicenseListViewModel.swift in Sources */,
 				C47EB4B628D7C0BE001755C3 /* SemiCircleBar.swift in Sources */,
 				C43C932A289253BD00719BBA /* CECreditDetailCell.swift in Sources */,
@@ -569,7 +559,6 @@
 				C4DCBD8128BFC5F900A20C0A /* LicenseRenewalRequirement+CoreDataClass.swift in Sources */,
 				C4882F7528DD27C300798913 /* NumberFormatter+CETrackerCreditHourFormatter.swift in Sources */,
 				C4AE95C9284545F300A4554A /* AppDelegate.swift in Sources */,
-				C49621C128D7FAC10021DD9A /* LicenseDetailModel.swift in Sources */,
 				C40464FD28D8204B009830AB /* RenewalRequirementDetailCell.swift in Sources */,
 				C43C9324288F076300719BBA /* CEImporter.swift in Sources */,
 				C42A3EE228CD058000C4D6E8 /* RenewalRequirementsBuilder.swift in Sources */,
@@ -591,7 +580,6 @@
 				C43C9327288F084100719BBA /* NABPCEImporter.swift in Sources */,
 				C4AE95CB284545F300A4554A /* SceneDelegate.swift in Sources */,
 				C4276A5328AD5E86004B0C6F /* NABPCEImporterConfigViewController.swift in Sources */,
-				C49621BF28D7FA5C0021DD9A /* LicenseDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

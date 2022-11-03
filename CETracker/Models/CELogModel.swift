@@ -25,6 +25,7 @@ class CELogModel: ObservableObject {
         let licenses = License.fetchAll(context: childContext)
         licenses.forEach { $0.addCredits(credits: newCredits) }
         try childContext.save()
+        try context.save()
         let objectIDs = newCredits.map { $0.objectID }
         let mainQueueCredits = objectIDs.compactMap { context.object(with: $0) as? CECredit }
         let sortedCredits = sortCredits(credits: mainQueueCredits)
