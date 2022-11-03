@@ -34,9 +34,6 @@ class CELogViewController: UIViewController {
         }
         alertController.addAction(NABPImportAction)
 
-        let manualAddAction = UIAlertAction(title: "Manual Entry", style: .default, handler: nil)
-        alertController.addAction(manualAddAction)
-
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
 
