@@ -2,7 +2,7 @@
 
 CETracker is an app for pharmacists to track continuing education credits.
 
-##Testing
+## Testing
 Credit import can be simulated using the username 'test' with any password
 
 ## Features
