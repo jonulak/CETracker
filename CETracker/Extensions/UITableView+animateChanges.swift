@@ -23,7 +23,7 @@ extension UITableView {
         }
         endUpdates()
     }
-    
+
     func animateUpdates(changes: TableViewChange) {
         animateUpdates(changes: [changes])
     }

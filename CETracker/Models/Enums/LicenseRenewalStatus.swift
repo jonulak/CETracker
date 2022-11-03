@@ -10,5 +10,5 @@ import Foundation
 enum LicenseRenewalStatus: String {
     case notSubmitted = "Not Submitted"
     case submitted = "Submitted"
-    case renewed = "Renewed"
+    case complete = "Complete"
 }

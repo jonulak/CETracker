@@ -2,13 +2,12 @@
 //  License+CoreDataProperties.swift
 //  CETracker
 //
-//  Created by Jon Onulak on 8/1/22.
+//  Created by Jon Onulak on 9/1/22.
 //
 //
 
 import Foundation
 import CoreData
-
 
 extension License {
 
@@ -16,29 +15,29 @@ extension License {
         return NSFetchRequest<License>(entityName: "License")
     }
 
-    @NSManaged public var state_: String?
     @NSManaged public var licenseNumber: String?
-    @NSManaged public var renewals: Set<LicenseRenewal>
+    @NSManaged public var state_: String?
+    @NSManaged public var renewals_: Set<LicenseRenewal>
 
 }
 
-// MARK: Generated accessors for renewals
+// MARK: Generated accessors for renewals_
 extension License {
 
-    @objc(addRenewalsObject:)
-    @NSManaged public func addToRenewals(_ value: LicenseRenewal)
+    @objc(addRenewals_Object:)
+    @NSManaged public func addToRenewals_(_ value: LicenseRenewal)
 
-    @objc(removeRenewalsObject:)
-    @NSManaged public func removeFromRenewals(_ value: LicenseRenewal)
+    @objc(removeRenewals_Object:)
+    @NSManaged public func removeFromRenewals_(_ value: LicenseRenewal)
 
-    @objc(addRenewals:)
-    @NSManaged public func addToRenewals(_ values: NSSet)
+    @objc(addRenewals_:)
+    @NSManaged public func addToRenewals_(_ values: NSSet)
 
-    @objc(removeRenewals:)
-    @NSManaged public func removeFromRenewals(_ values: NSSet)
+    @objc(removeRenewals_:)
+    @NSManaged public func removeFromRenewals_(_ values: NSSet)
 
 }
 
-extension License : Identifiable {
+extension License: Identifiable {
 
 }

@@ -2,13 +2,12 @@
 //  CECredit+CoreDataProperties.swift
 //  CETracker
 //
-//  Created by Jon Onulak on 8/1/22.
+//  Created by Jon Onulak on 8/31/22.
 //
 //
 
 import Foundation
 import CoreData
-
 
 extension CECredit {
 
@@ -24,28 +23,28 @@ extension CECredit {
     @NSManaged public var source_: String?
     @NSManaged public var title_: String?
     @NSManaged public var uan_: String?
-    @NSManaged public var renewals: NSSet?
+    @NSManaged public var licenseRequirementsApplied: Set<LicenseRenewalRequirement>
     @NSManaged public var topicDesignator_: TopicDesignator?
 
 }
 
-// MARK: Generated accessors for renewals
+// MARK: Generated accessors for licenseRequirementsApplied
 extension CECredit {
 
-    @objc(addRenewalsObject:)
-    @NSManaged public func addToRenewals(_ value: LicenseRenewal)
+    @objc(addLicenseRequirementsAppliedObject:)
+    @NSManaged public func addToLicenseRequirementsApplied(_ value: LicenseRenewalRequirement)
 
-    @objc(removeRenewalsObject:)
-    @NSManaged public func removeFromRenewals(_ value: LicenseRenewal)
+    @objc(removeLicenseRequirementsAppliedObject:)
+    @NSManaged public func removeFromLicenseRequirementsApplied(_ value: LicenseRenewalRequirement)
 
-    @objc(addRenewals:)
-    @NSManaged public func addToRenewals(_ values: NSSet)
+    @objc(addLicenseRequirementsApplied:)
+    @NSManaged public func addToLicenseRequirementsApplied(_ values: NSSet)
 
-    @objc(removeRenewals:)
-    @NSManaged public func removeFromRenewals(_ values: NSSet)
+    @objc(removeLicenseRequirementsApplied:)
+    @NSManaged public func removeFromLicenseRequirementsApplied(_ values: NSSet)
 
 }
 
-extension CECredit : Identifiable {
+extension CECredit: Identifiable {
 
 }

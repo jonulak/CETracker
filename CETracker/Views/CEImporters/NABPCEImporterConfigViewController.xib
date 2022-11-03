@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCa-bx-hzh" userLabel="Top View">
-                    <rect key="frame" x="8" y="44" width="398" height="260"/>
+                    <rect key="frame" x="8" y="44" width="398" height="236.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NABP Login" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xze-2O-RZ5">
-                            <rect key="frame" x="40" y="213" width="160.5" height="37"/>
+                            <rect key="frame" x="40" y="189.5" width="160.5" height="37"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -36,12 +36,8 @@
                         <constraint firstAttribute="bottom" secondItem="xze-2O-RZ5" secondAttribute="bottom" constant="10" id="KSZ-Lq-XTL"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJT-Ad-2IK" userLabel="Bottom View">
-                    <rect key="frame" x="8" y="472" width="398" height="390"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cyV-mq-546">
-                    <rect key="frame" x="40" y="304" width="334" height="168"/>
+                    <rect key="frame" x="40" y="280.5" width="334" height="168"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WKC-VJ-svG">
                             <rect key="frame" x="8" y="0.0" width="318" height="34"/>
@@ -109,6 +105,10 @@
                         <constraint firstItem="y8d-df-XJc" firstAttribute="width" secondItem="WKC-VJ-svG" secondAttribute="width" id="zlA-hQ-bMh"/>
                     </constraints>
                 </stackView>
+                <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJT-Ad-2IK" userLabel="Bottom View">
+                    <rect key="frame" x="8" y="448.5" width="398" height="413.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,7 +124,7 @@
                 <constraint firstItem="cJT-Ad-2IK" firstAttribute="top" secondItem="cyV-mq-546" secondAttribute="bottom" id="YB4-ry-lKn"/>
                 <constraint firstItem="cJT-Ad-2IK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="q44-XU-Onc"/>
                 <constraint firstItem="YHU-Pk-D0F" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="wFh-2b-ajU"/>
-                <constraint firstItem="cJT-Ad-2IK" firstAttribute="height" secondItem="gCa-bx-hzh" secondAttribute="height" multiplier="1.5" id="zLH-7U-CUF"/>
+                <constraint firstItem="cJT-Ad-2IK" firstAttribute="height" secondItem="gCa-bx-hzh" secondAttribute="height" multiplier="1.75" id="zLH-7U-CUF"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
         </view>

@@ -17,13 +17,13 @@ enum CECreditError: Error {
 
 @objc(CECredit)
 public class CECredit: NSManagedObject {
-    
+
     static func getTopicDesignatorCode(UAN: String) -> String {
         let splitUAN = UAN.split(separator: "-")
         let code = splitUAN[4].dropFirst()
         return String(code)
     }
-    
+
     static func with(UAN: String, context: NSManagedObjectContext) -> CECredit? {
         let request = CECredit.fetchRequest()
         request.predicate = NSPredicate(
@@ -32,24 +32,35 @@ public class CECredit: NSManagedObject {
         )
         return try? context.fetch(request).first
     }
-    
+
     static func fetchAll(context: NSManagedObjectContext) -> [CECredit] {
         let request = CECredit.fetchRequest()
         return (try? context.fetch(request)) ?? []
     }
-    
-    convenience init?(creditProperties: [CELogProperty:String], context: NSManagedObjectContext) throws {
-        for CEProp in CELogProperty.allCases {
-            guard creditProperties[CEProp] != nil else {
-                throw CECreditError.missingProperty(CEProp)
+
+    static func from(_ startDate: Date, to endDate: Date, context: NSManagedObjectContext) -> [CECredit] {
+        let request = CECredit.fetchRequest()
+        let dateKeyPath = NSExpression(forKeyPath: \CECredit.date_).keyPath
+        request.predicate = NSPredicate(
+            format: "%K >= %@ && %K <= %@",
+            dateKeyPath, startDate as NSDate,
+            dateKeyPath, endDate as NSDate
+        )
+        return (try? context.fetch(request)) ?? []
+    }
+
+    convenience init?(creditProperties: [CELogProperty: String], context: NSManagedObjectContext) throws {
+        for CEProperty in CELogProperty.allCases {
+            guard creditProperties[CEProperty] != nil else {
+                throw CECreditError.missingProperty(CEProperty)
             }
         }
-        
+
         // Ignore duplicate entries
         if let uan = creditProperties[.UAN], CECredit.with(UAN: uan, context: context) != nil {
             return nil
         }
-        
+
         self.init(entity: CECredit.entity(), insertInto: context)
 
         uan = creditProperties[.UAN]!
@@ -61,7 +72,7 @@ public class CECredit: NSManagedObject {
         let designatorCode = Self.getTopicDesignatorCode(UAN: uan)
         let designatorTitle = creditProperties[.topicDesignators]!
         if let topicDesignator = CETopicDesignator(topicDesignatorCode: designatorCode, topicString: designatorTitle) {
-            
+
             self.topicDesignator = topicDesignator
         } else {
             throw CECreditError.invalidTopicDesignator
@@ -81,37 +92,37 @@ public class CECredit: NSManagedObject {
             throw CECreditError.invalidDate
         }
     }
-    
+
     var date: Date {
         get { date_! }
         set { date_ = newValue }
     }
-    
+
     var uan: String {
         get { uan_! }
         set { uan_ = newValue }
     }
-    
+
     var creditType: String {
         get { creditType_! }
         set { creditType_ = newValue }
     }
-    
+
     var source: String {
         get { source_! }
         set { source_ = newValue }
     }
-    
+
     var title: String {
         get { title_! }
         set { title_ = newValue }
     }
-    
+
     var provider: String {
         get { provider_! }
         set { provider_ = newValue }
     }
-    
+
     var topicDesignator: CETopicDesignator {
         get {
             let CDtopicDesigntor = topicDesignator_!
@@ -123,6 +134,6 @@ public class CECredit: NSManagedObject {
             topicDesignator_ = TopicDesignator.from(enumDesignator, context: context)
         }
     }
-    
+
     var totalHours: Float { liveHours + homeHours }
 }

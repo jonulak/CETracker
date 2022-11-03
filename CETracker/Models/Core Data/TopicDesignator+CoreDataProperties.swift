@@ -2,13 +2,12 @@
 //  TopicDesignator+CoreDataProperties.swift
 //  CETracker
 //
-//  Created by Jon Onulak on 8/1/22.
+//  Created by Jon Onulak on 8/31/22.
 //
 //
 
 import Foundation
 import CoreData
-
 
 extension TopicDesignator {
 
@@ -39,6 +38,6 @@ extension TopicDesignator {
 
 }
 
-extension TopicDesignator : Identifiable {
+extension TopicDesignator: Identifiable {
 
 }

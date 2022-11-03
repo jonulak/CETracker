@@ -14,9 +14,9 @@ class NestedTableView: UITableView {
         self.layoutIfNeeded()
         return self.contentSize
     }
-    
+
     override var contentSize: CGSize {
-        didSet{
+        didSet {
             self.invalidateIntrinsicContentSize()
         }
     }

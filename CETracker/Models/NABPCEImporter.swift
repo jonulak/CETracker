@@ -20,7 +20,7 @@ class NABPCEImporter: NSObject {
         case fileDownloading
         case importCEFromFile
         case error(ImportFlowError)
-        
+
         var flowDescription: String? {
             switch self {
             case .loginPage, .blankPage:
@@ -32,12 +32,13 @@ class NABPCEImporter: NSObject {
             }
         }
     }
-    
+
     private enum ImportFlowError: Error, LocalizedError {
         case noUsernameEntered
         case noPasswordEntered
         case invalidLoginCredentials
-        
+        case invalidTestDataURL
+
         var errorDescription: String? {
             switch self {
             case .noUsernameEntered:
@@ -46,28 +47,31 @@ class NABPCEImporter: NSObject {
                 return "No password was entered"
             case .invalidLoginCredentials:
                 return "Incorrect username or password was entered"
+            case .invalidTestDataURL:
+                return "Invalid test data file name"
             }
         }
     }
-    
+
     private var flowStatus: ImportFlowStatus = .loginPage
     private let appSupportURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
     private var CELogFileLocation: URL = {
         let appSupportURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
         let fileURL = appSupportURL
-            .appendingPathComponent("NABPImport" + String(Int.random(in: 10000...99999)))
+            .appendingPathComponent("NABPImport-" + UUID().uuidString)
             .appendingPathExtension("xlsx")
         return fileURL
     }()
-    
-    private var user: String!
-    private var pass: String!
-    
+
+    private var user: String?
+    private var pass: String?
+    private let testUser = "test"
+
     override init() {
-        super.init()        
+        super.init()
         print(CELogFileLocation)
     }
-    
+
     enum XLSXParserError: Error {
         case fileAccessError
         case parsedStrings
@@ -75,12 +79,12 @@ class NABPCEImporter: NSObject {
         case parsingWorksheetPathsAndNames
         case parseRows
     }
-    
+
     func setLoginDetails(user: String, pass: String) {
         self.user = user
         self.pass = pass
     }
-    
+
     private func parseXLSX(URL: URL, context: NSManagedObjectContext) throws -> [CECredit] {
         guard let file = XLSXFile(filepath: URL.path) else { throw XLSXParserError.fileAccessError }
         guard let sharedStrings = try file.parseSharedStrings() else { throw XLSXParserError.parsedStrings }
@@ -110,40 +114,49 @@ extension NABPCEImporter: CEImporter {
         vc.importer = self
         return vc
     }
-    
+
     func importCE(context: NSManagedObjectContext) async throws -> [CECredit] {
+        guard let user = user, !user.isEmpty else { throw ImportFlowError.noUsernameEntered }
+        guard let pass = pass, !pass.isEmpty else { throw ImportFlowError.noPasswordEntered }
+
+        if user == testUser { return try testData(context: context) }
+
         let loginURLString = "https://sso.nabp.pharmacy/Account/Login"
         let loginURL = URL(string: loginURLString)!
         let request = URLRequest(url: loginURL)
-        
-        guard let user = user, !user.isEmpty else { throw ImportFlowError.noUsernameEntered }
-        guard let pass = pass, !pass.isEmpty else { throw ImportFlowError.noPasswordEntered }
-        
+
         let webView = await MainActor.run { () -> WKWebView in
             let webView = WKWebView()
             webView.navigationDelegate = self
             return webView
         }
-            
+
         await webView.load(request)
-        
+
         while flowStatus != .importCEFromFile {
             switch flowStatus {
-            case .error(let error): throw error
-            case .importCEFromFile: continue
-            default: try await Task.sleep(nanoseconds: UInt64(1 * Double(NSEC_PER_SEC)))
+            case .error(let error):
+                throw error
+            case .importCEFromFile:
+                continue
+            default:
+                try await Task.sleep(nanoseconds: UInt64(1 * Double(NSEC_PER_SEC)))
             }
         }
         let credits = try parseXLSX(URL: CELogFileLocation, context: context)
         try FileManager.default.removeItem(at: CELogFileLocation)
         return credits
     }
+
+    private func testData(context: NSManagedObjectContext) throws -> [CECredit] {
+        guard let testDataURL = Bundle.main.url(forResource: "testcpe", withExtension: ".xlsx") else {
+            throw ImportFlowError.invalidTestDataURL
+        }
+        return try parseXLSX(URL: testDataURL, context: context)
+    }
 }
 
-
-
 // MARK: - WKNavigationDelegate
-// TODO:  Add timeouts, error checking/handling
 extension NABPCEImporter: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         switch self.flowStatus {
@@ -159,11 +172,12 @@ extension NABPCEImporter: WKNavigationDelegate {
             print("logging in")
             webView.evaluateJavaScript("document.getElementById('username').value='\(user)'")
             webView.evaluateJavaScript("document.getElementById('password').value='\(pass)'")
+            self.user = nil
+            self.pass = nil
             flowStatus = .blankPage
             webView.evaluateJavaScript("document.getElementById('loginform').submit();")
         case .blankPage:
             print("nav to dash")
-            // TODO:  Handle login errors here
             let dashboardURLString = "https://dashboard.nabp.pharmacy/#/dashboard/home"
             let dashboardURL = URL(string: dashboardURLString)!
             let request = URLRequest(url: dashboardURL)
@@ -172,7 +186,7 @@ extension NABPCEImporter: WKNavigationDelegate {
         case .dashboard:
             print("load CPE monitor")
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                webView.evaluateJavaScript("document.getElementsByTagName('mat-card')[0].innerHTML") { value, error in
+                webView.evaluateJavaScript("document.getElementsByTagName('mat-card')[0].innerHTML") { _, error in
                     if error == nil {
                         timer.invalidate()
                         webView.evaluateJavaScript("document.getElementsByTagName('mat-card')[0].click();")
@@ -188,7 +202,7 @@ extension NABPCEImporter: WKNavigationDelegate {
             let request = URLRequest(url: CSVURL)
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 print("timer running")
-                webView.evaluateJavaScript("document.getElementById('dropdownMenuButton').innerHTML") { value, error in
+                webView.evaluateJavaScript("document.getElementById('dropdownMenuButton').innerHTML") { _, error in
                     if error == nil {
                         timer.invalidate()
                         webView.startDownload(using: request) { download in
@@ -201,7 +215,6 @@ extension NABPCEImporter: WKNavigationDelegate {
         }
     }
 }
-
 
 // MARK: - WKDownloadDelegate
 extension NABPCEImporter: WKDownloadDelegate {

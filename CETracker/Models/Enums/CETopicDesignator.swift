@@ -9,7 +9,7 @@ import Foundation
 
 enum CETopicDesignator: Equatable {
     case diseaseStateManagementDrugTherapy, AIDSHIVTherapy, law, pharmacyAdministration, patientSafety, immunizations, compounding, painManagement, additional(String)
-    
+
     init(string: String) {
         switch string {
         case "Disease State Mgmt/Drug Therapy": self = .diseaseStateManagementDrugTherapy
@@ -23,7 +23,7 @@ enum CETopicDesignator: Equatable {
         default: self = .additional(string)
         }
     }
-    
+
     init?(topicDesignatorCode: String, topicString: String) {
         switch topicDesignatorCode {
         case "01": self = .diseaseStateManagementDrugTherapy
@@ -38,7 +38,7 @@ enum CETopicDesignator: Equatable {
         default: return nil
         }
     }
-    
+
     var topicDesignatorCode: String {
         switch self {
         case .diseaseStateManagementDrugTherapy: return "01"
@@ -52,7 +52,7 @@ enum CETopicDesignator: Equatable {
         case .additional: return "99"
         }
     }
-    
+
     var topicDesignatorTitle: String {
         switch self {
         case .AIDSHIVTherapy: return "AIDS/HIV Therapy"

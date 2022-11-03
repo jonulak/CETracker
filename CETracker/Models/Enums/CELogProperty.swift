@@ -9,7 +9,7 @@ import Foundation
 
 enum CELogProperty: CaseIterable {
     case date, UAN, creditType, source, title, provider, topicDesignators, liveHours, homeHours
-    
+
     init?(string: String) {
         switch string {
         case "Activity Date": self = .date

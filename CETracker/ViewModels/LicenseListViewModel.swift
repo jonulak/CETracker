@@ -7,28 +7,25 @@
 
 import Foundation
 import CoreData
-import Combine
 
 class LicenseListViewModel: ObservableObject {
-    
-    @Published private var licenseListModel: LicenseListModel
-    var context: NSManagedObjectContext
-    
+
+    private var licenseListModel: LicenseListModel
+    private var context: NSManagedObjectContext
+
     var licenses: [License] { licenseListModel.licenses }
-    var cancellables = Set<AnyCancellable>()
-    
+
     init(context: NSManagedObjectContext) {
         licenseListModel = LicenseListModel(context: context)
         self.context = context
     }
-    
-    func addLicense(for state: USState) -> TableViewChange? {
-        return licenseListModel.addLicense(for: state)
+
+    func addLicense(licenseInfo: LicenseInfo) -> TableViewChange? {
+        licenseListModel.addLicense(licenseInfo: licenseInfo)
     }
-    
-    func getValidCreditsFor(state: USState) -> [CECredit] {
-        // TODO:  Date filtering for renewal period
-        return CECredit.fetchAll(context: context)
+
+    func clearLicenses() -> TableViewChange? {
+        licenseListModel.clearLicenses()
     }
-    
+
 }

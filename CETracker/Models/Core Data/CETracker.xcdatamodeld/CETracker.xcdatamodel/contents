@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="CECredit" representedClassName="CECredit" syncable="YES">
         <attribute name="creditType_" optional="YES" attributeType="String"/>
         <attribute name="date_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -9,40 +9,38 @@
         <attribute name="source_" optional="YES" attributeType="String"/>
         <attribute name="title_" optional="YES" attributeType="String"/>
         <attribute name="uan_" optional="YES" attributeType="String"/>
-        <relationship name="renewalRequirements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RenewalRequirement" inverseName="credits" inverseEntity="RenewalRequirement"/>
+        <relationship name="licenseRequirementsApplied" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LicenseRenewalRequirement" inverseName="appliedCredits" inverseEntity="LicenseRenewalRequirement"/>
         <relationship name="topicDesignator_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicDesignator" inverseName="credits" inverseEntity="TopicDesignator"/>
         <fetchIndex name="byUAN">
             <fetchIndexElement property="uan_" type="Binary" order="ascending"/>
         </fetchIndex>
+        <fetchIndex name="byDate">
+            <fetchIndexElement property="date_" type="Binary" order="ascending"/>
+        </fetchIndex>
     </entity>
     <entity name="License" representedClassName="License" syncable="YES">
-        <attribute name="expiration_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="licenseNumber" optional="YES" attributeType="String"/>
         <attribute name="state_" optional="YES" attributeType="String"/>
-        <relationship name="renewals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LicenseRenewal" inverseName="license" inverseEntity="LicenseRenewal"/>
+        <relationship name="renewals_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LicenseRenewal" inverseName="license" inverseEntity="LicenseRenewal"/>
     </entity>
     <entity name="LicenseRenewal" representedClassName="LicenseRenewal" syncable="YES">
-        <attribute name="renewalDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="carryoverStartDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isImmunizer" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="periodEndDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="periodStartDate_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="status_" optional="YES" attributeType="String"/>
-        <relationship name="license" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="License" inverseName="renewals" inverseEntity="License"/>
-        <relationship name="requirements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RenewalRequirement" inverseName="licenseRenewal" inverseEntity="RenewalRequirement"/>
+        <relationship name="license" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="License" inverseName="renewals_" inverseEntity="License"/>
+        <relationship name="licenseRenewalRequirements_" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LicenseRenewalRequirement" inverseName="licenseRenewal" inverseEntity="LicenseRenewalRequirement"/>
     </entity>
-    <entity name="RenewalRequirement" representedClassName="RenewalRequirement" syncable="YES" codeGenerationType="class">
-        <attribute name="id_" optional="YES" attributeType="String"/>
+    <entity name="LicenseRenewalRequirement" representedClassName="LicenseRenewalRequirement" syncable="YES">
+        <attribute name="creditsRequired" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="title_" optional="YES" attributeType="String"/>
-        <relationship name="credits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CECredit" inverseName="renewalRequirements" inverseEntity="CECredit"/>
-        <relationship name="licenseRenewal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LicenseRenewal" inverseName="requirements" inverseEntity="LicenseRenewal"/>
+        <relationship name="appliedCredits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CECredit" inverseName="licenseRequirementsApplied" inverseEntity="CECredit"/>
+        <relationship name="licenseRenewal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LicenseRenewal" inverseName="licenseRenewalRequirements_" inverseEntity="LicenseRenewal"/>
     </entity>
     <entity name="TopicDesignator" representedClassName="TopicDesignator" syncable="YES">
         <attribute name="code_" optional="YES" attributeType="String"/>
         <attribute name="title_" optional="YES" attributeType="String"/>
         <relationship name="credits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CECredit" inverseName="topicDesignator_" inverseEntity="CECredit"/>
     </entity>
-    <elements>
-        <element name="CECredit" positionX="-63" positionY="-18" width="128" height="179"/>
-        <element name="License" positionX="-54" positionY="54" width="128" height="89"/>
-        <element name="LicenseRenewal" positionX="-54" positionY="63" width="128" height="89"/>
-        <element name="TopicDesignator" positionX="-54" positionY="45" width="128" height="74"/>
-        <element name="RenewalRequirement" positionX="-54" positionY="63" width="128" height="89"/>
-    </elements>
 </model>

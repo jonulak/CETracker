@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="KGk-i7-Jjw" customClass="RenewalRequirementDetailCell" customModule="CETracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="623" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="623" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcn-uH-GvI" userLabel="Cell Background">
+                        <rect key="frame" x="8" y="4" width="607" height="117"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DMn-Gh-6Tb">
+                                <rect key="frame" x="0.0" y="0.0" width="607" height="69"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkk-J6-rMI" customClass="SemiCircleProgressBar" customModule="CETracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="9.6666666666666643" width="50" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="27G-AF-YzN"/>
+                                            <constraint firstAttribute="width" secondItem="bkk-J6-rMI" secondAttribute="height" multiplier="1:1" id="4lH-gn-7Tf"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-Qb-fcT" userLabel="TitleLabel">
+                                        <rect key="frame" x="58" y="17.666666666666668" width="549" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="288" placeholderIntrinsicHeight="40" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zmz-2c-QGs" customClass="NestedTableView" customModule="CETracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="69" width="607" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="zmz-2c-QGs" firstAttribute="leading" secondItem="Kcn-uH-GvI" secondAttribute="leading" id="1AQ-OG-KIn"/>
+                            <constraint firstItem="DMn-Gh-6Tb" firstAttribute="top" secondItem="Kcn-uH-GvI" secondAttribute="top" id="Q83-XY-CjV"/>
+                            <constraint firstAttribute="trailing" secondItem="DMn-Gh-6Tb" secondAttribute="trailing" id="QXM-G4-PPX"/>
+                            <constraint firstItem="DMn-Gh-6Tb" firstAttribute="leading" secondItem="Kcn-uH-GvI" secondAttribute="leading" id="Y8R-Qo-Jbq"/>
+                            <constraint firstItem="zmz-2c-QGs" firstAttribute="top" secondItem="DMn-Gh-6Tb" secondAttribute="bottom" id="an8-J1-7gs"/>
+                            <constraint firstAttribute="trailing" secondItem="zmz-2c-QGs" secondAttribute="trailing" id="kmJ-c5-nf3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zmz-2c-QGs" secondAttribute="bottom" id="nwZ-aB-aSd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Kcn-uH-GvI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="1BD-t2-r8c"/>
+                    <constraint firstItem="Kcn-uH-GvI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="99a-dT-lLU"/>
+                    <constraint firstAttribute="bottom" secondItem="Kcn-uH-GvI" secondAttribute="bottom" constant="4" id="IK5-fH-e93"/>
+                    <constraint firstAttribute="trailing" secondItem="Kcn-uH-GvI" secondAttribute="trailing" constant="8" id="RU1-gK-ZYD"/>
+                    <constraint firstItem="Kcn-uH-GvI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="ZYB-MW-fPG"/>
+                    <constraint firstAttribute="trailing" secondItem="Kcn-uH-GvI" secondAttribute="trailing" constant="8" id="ZYW-di-i2U"/>
+                    <constraint firstItem="Kcn-uH-GvI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="oiq-fz-dwv"/>
+                    <constraint firstAttribute="bottom" secondItem="Kcn-uH-GvI" secondAttribute="bottom" constant="4" id="sdN-5M-qgG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellBubble" destination="Kcn-uH-GvI" id="UIh-RG-Mut"/>
+                <outlet property="creditsTable" destination="zmz-2c-QGs" id="agh-hu-f31"/>
+                <outlet property="progressView" destination="bkk-J6-rMI" id="G8L-CA-Agk"/>
+                <outlet property="titleLabel" destination="qlL-Qb-fcT" id="zF4-R8-bTy"/>
+            </connections>
+            <point key="canvasLocation" x="302.30769230769232" y="67.890995260663502"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

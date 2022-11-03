@@ -7,23 +7,24 @@
 
 import UIKit
 
-class RenewalRequirementCell: UITableViewCell {
+class RenewalRequirementProgressBarCell: UITableViewCell {
 
     @IBOutlet weak var requirementTitleLabel: UILabel!
     @IBOutlet weak var creditCounts: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
-    
+
     var completedCredits: Float = 0 {
         didSet {
             updateCreditProgress()
         }
     }
+
     var targetCredits: Float = 30 {
         didSet {
             updateCreditProgress()
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,10 +35,10 @@ class RenewalRequirementCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-    
+
     private func updateCreditProgress() {
         creditCounts.text = "\(completedCredits)/\(targetCredits)"
         progressBar.progress = min(completedCredits / targetCredits, 1.0)
     }
-    
+
 }

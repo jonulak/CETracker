@@ -1,0 +1,10 @@
+identifier_name:
+  excluded: #excluded via string array
+    - id
+disabled_rules:
+  - identifier_name
+  - line_length
+  - generic_type_name
+  - force_cast
+cyclomatic_complexity:
+  ignores_case_statements: true
