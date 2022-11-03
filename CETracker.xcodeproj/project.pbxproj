@@ -67,6 +67,7 @@
 		C4E28A3F28979B1400E8636F /* LicenseListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E28A3E28979B1400E8636F /* LicenseListModel.swift */; };
 		C4F541A72898F5B500E308CA /* RenewalRequirementProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F541A52898F5B500E308CA /* RenewalRequirementProgressBarCell.swift */; };
 		C4F541A82898F5B500E308CA /* RenewalRequirementProgressBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F541A62898F5B500E308CA /* RenewalRequirementProgressBarCell.xib */; };
+		C4FD183E291437EE00373B8B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4FD183D291437EE00373B8B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		C4E28A3E28979B1400E8636F /* LicenseListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseListModel.swift; sourceTree = "<group>"; };
 		C4F541A52898F5B500E308CA /* RenewalRequirementProgressBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenewalRequirementProgressBarCell.swift; sourceTree = "<group>"; };
 		C4F541A62898F5B500E308CA /* RenewalRequirementProgressBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RenewalRequirementProgressBarCell.xib; sourceTree = "<group>"; };
+		C4FD183D291437EE00373B8B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 		C4AE95BC284545F300A4554A = {
 			isa = PBXGroup;
 			children = (
+				C4FD183D291437EE00373B8B /* README.md */,
 				C40720FF28D5AB7D0051E735 /* .swiftlint.yml */,
 				C4AE95C7284545F300A4554A /* CETracker */,
 				C4AE95E1284545F500A4554A /* CETrackerTests */,
@@ -485,6 +488,7 @@
 				C4F541A82898F5B500E308CA /* RenewalRequirementProgressBarCell.xib in Resources */,
 				C4BBD3572914264F006FE833 /* testcpe.xlsx in Resources */,
 				C404650228DA3553009830AB /* RenewalDetailCreditCell.xib in Resources */,
+				C4FD183E291437EE00373B8B /* README.md in Resources */,
 				C4AE95D8284545F400A4554A /* LaunchScreen.storyboard in Resources */,
 				C4AE95D5284545F400A4554A /* Assets.xcassets in Resources */,
 				C4AE95D0284545F300A4554A /* Main.storyboard in Resources */,
